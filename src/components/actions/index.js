@@ -1,13 +1,13 @@
 
 
 export const GETBEARS="GETBEARS";
+export const CREATEBEAR="CREATEBEAR";
 
-export const getBears = async() =>{
+export const getBears = (bears) =>{
    
- return {
-    // type:GETBEARS,
-    // bears:bears
-
- };
+//  return {
+//     type:GETBEARS,
+//     bears:bears
+//  };
 
 }

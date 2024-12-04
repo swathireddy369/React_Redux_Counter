@@ -1,14 +1,13 @@
 import { combineReducers } from "redux";
-import { GETBEARS } from "../components/actions";
+import { GETBEARS ,CREATEBEAR} from "../components/actions";
 const bearsReducer = (
-    bears=[] ,
+    bears=[{latinName:"blackBear"},{latinName:"whiteBear"},{latinName:"Bear"}] ,
     action) => {
-        console.log("coming here",action);
-    switch (action.type) {
+        switch (action.type) {
         case GETBEARS:
-            console.log("action", action,bears);
-            
-            return [...bears, ...action.bears];
+            return [...bears,...action.bears];
+        case CREATEBEAR:
+             return [...bears,action.createBear.data]    
         default:
             return bears;
     }
